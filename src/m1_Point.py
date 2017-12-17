@@ -101,6 +101,10 @@ class Point(object):
             return sndpoint
 
     def halfway_to(self, incoming):
+        midpointx = ((incoming.x - self.x)//2) + self.x
+        midpointy = ((incoming.y - self.y)//2) + self.y
+        return Point(midpointx, midpointy)
+
 
 
 
@@ -1013,7 +1017,7 @@ def run_test_closer_to():
         print('Actual:  ', p1.closer_to(p4, p5) is p5)
     """
     # ------------------------------------------------------------------
-    # TODO: 12.  Follow the same instructions as in TODO 3 above,
+    # DONE: 12.  Follow the same instructions as in DONE 3 above,
     #    but for the  closer_to  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -1096,7 +1100,7 @@ def run_test_halfway_to():
 
     """
     # ------------------------------------------------------------------
-    # TODO: 13.  Follow the same instructions as in TODO 3 above,
+    # DONE: 13.  Follow the same instructions as in DONE 3 above,
     #    but for the  halfway_to  method specified above.
     # ------------------------------------------------------------------
     print()
